@@ -11,7 +11,7 @@ def busca_sequencial(lista, val):
         # Encontrou val; retorna a posição onde foi encontrado
         if val == lista[pos]: return pos
     # Percorreu toda a lista e não encontrou val: retorna -1
-    return -1
+    return 'NÃO ENCONTRADO'
 
 ################################################################################
 
@@ -30,8 +30,31 @@ resultado = busca_sequencial(nums, 33)
 print(f'Posição do valor 33 na lista: {resultado}')
 
 # TESTES COM NOMES
-from data.nomes_desord import nomes
+
+import sys
+sys.dont_write_bytecode = True     # Impede a criação do cache
+
+from time import time
+
+from data.lista_nomes import nomes
 
 # Busca pelo nome VICTOR
+hora_ini = time()
 resultado = busca_sequencial(nomes, 'VICTOR')
+hora_fim = time()
 print(f'Posição do nome VICTOR na lista: {resultado}')
+print(f'Tempo gasto: {(hora_fim - hora_ini) * 1000}ms')
+
+# Busca pelo nome BRUNO
+hora_ini = time()
+resultado = busca_sequencial(nomes, 'BRUNO')
+hora_fim = time()
+print(f'Posição do nome BRUNO na lista: {resultado}')
+print(f'Tempo gasto: {(hora_fim - hora_ini) * 1000}ms')
+
+# Busca por um nome inexistente
+hora_ini = time()
+resultado = busca_sequencial(nomes, 'BIN LADEN')
+hora_fim = time()
+print(f'Posição do nome BIN LADEN na lista: {resultado}')
+print(f'Tempo gasto: {(hora_fim - hora_ini) * 1000}ms')
