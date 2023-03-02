@@ -11,7 +11,7 @@ def busca_sequencial(lista, val):
         # Encontrou val; retorna a posição onde foi encontrado
         if val == lista[pos]: return pos
     # Percorreu toda a lista e não encontrou val: retorna -1
-    return 'NÃO ENCONTRADO'
+    return -1
 
 ################################################################################
 
