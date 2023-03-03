@@ -45,6 +45,8 @@ hora_fim = time()
 print(f'Posição do nome VICTOR na lista: {resultado}')
 print(f'Tempo gasto: {(hora_fim - hora_ini) * 1000}ms')
 
+print('\n', '-'*80, '\n', sep='')
+
 # Busca pelo nome BRUNO
 hora_ini = time()
 resultado = busca_sequencial(nomes, 'BRUNO')
@@ -52,9 +54,13 @@ hora_fim = time()
 print(f'Posição do nome BRUNO na lista: {resultado}')
 print(f'Tempo gasto: {(hora_fim - hora_ini) * 1000}ms')
 
+print('\n', '-'*80, '\n', sep='')
+
 # Busca por um nome inexistente
 hora_ini = time()
 resultado = busca_sequencial(nomes, 'BIN LADEN')
 hora_fim = time()
 print(f'Posição do nome BIN LADEN na lista: {resultado}')
 print(f'Tempo gasto: {(hora_fim - hora_ini) * 1000}ms')
+
+print('\n', '-'*80, '\n', sep='')
